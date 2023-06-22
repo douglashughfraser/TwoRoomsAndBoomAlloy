@@ -1,4 +1,4 @@
-# TwoRoomsAndBoomAlloy
+# Two Rooms and a Boom: Game Generator in Alloy
 Alloy 6 model that generates random, approximately balanced play sets of the game Two Rooms and a Boom.
 
 Alloy functions on a system of specified requirements; I have used this to create signatures representing each card in the print-and-play deck and the requirements of those cards.
