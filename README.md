@@ -20,13 +20,18 @@ It's not perfect (giving an accurate approximation of the objective strength of 
 3. Choose the right game setting for the number of players you have. Explained below.
 
 Here's the list of all the run options:
-_run OddPlayersNoBuried
-run EvenPlayersOddRoomsNoBuried
-run EvenPlayersEvenRoomsNoBuried
 
-run OddPlayersBuried
-run EvenPlayersOddRoomsBuried
-run EvenPlayersEvenRoomsBuried_
+_run OddPlayersNoBuried_
+
+_run EvenPlayersOddRoomsNoBuried_
+
+_run EvenPlayersEvenRoomsNoBuried_
+
+_run OddPlayersBuried_
+
+_run EvenPlayersOddRoomsBuried_
+
+_run EvenPlayersEvenRoomsBuried_
 
 Depending on how many players you have certain cards shouldn't be included (Mayor and Bouncer) as they rely on an odd or even number of players in the rooms to work. For quick reference, I've commented each number from 6-30 above the appropriate run option. 
 Some cards require a buried card to work, so if you're not going to bury a card then select one of the "...NoBuried" options. Selecting a "...Buried" game enforces the presence of the support primary cards (Presidents Daughter, Martyr, Tinkerer and Nurse) and enables the optional presence of the Drunk, Private Eye and Gambler.
@@ -38,3 +43,7 @@ _run OddPlayersNoBuried{
 	//(sum p:Player | p.rating) = 7
 } for **exactly 7 Player**, 0 Drunk, 0 Gambler, 0 PrivateEye_
 
+On "Ratings":
+This is a system similar to the balance scheme but instead enables certain cards to be positively or negatively weighted to improve their frequency. To use it, uncomment the //(sum p:Player | p.rating) = 7 line and - if you like - edit the rating of any cards within the signatures. Note that this makes it harder for the solver to find instances. I'd hoped to use this to try to produce the most fun games I could imagine, but personally I don't think the results are markedly improved and prefer having more instances and just sifting past games that don't look interesting. 
+
+If there are cards that you specifically hate (looking at you Clown...) then you can more efficiently remove them by adding ", 0 Clown" to the end of the list following any of the run commands. Likewise, you can instead enforce that a card always appear by adding ", exactly 2 Clown".
