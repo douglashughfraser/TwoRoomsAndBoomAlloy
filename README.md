@@ -44,6 +44,7 @@ _run OddPlayersNoBuried{
 } for **exactly 7 Player**, 0 Drunk, 0 Gambler, 0 PrivateEye_
 
 On "Ratings":
+
 This is a system similar to the balance scheme but instead enables certain cards to be positively or negatively weighted to improve their frequency. To use it, uncomment the //(sum p:Player | p.rating) = 7 line and - if you like - edit the rating of any cards within the signatures. Note that this makes it harder for the solver to find instances. I'd hoped to use this to try to produce the most fun games I could imagine, but personally I don't think the results are markedly improved and prefer having more instances and just sifting past games that don't look interesting. 
 
 If there are cards that you specifically hate (looking at you Clown...) then you can more efficiently remove them by adding ", 0 Clown" to the end of the list following any of the run commands. Likewise, you can instead enforce that a card always appear by adding ", exactly 2 Clown".
