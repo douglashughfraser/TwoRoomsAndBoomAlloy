@@ -14,25 +14,27 @@ Using these requirements as a baseline, the tool enables experimentation with cr
 It's not perfect (giving an accurate approximation of the objective strength of any given card isn't possible) so some consideration of its output is recommended. However, it comes up with some interesting suggestions, and it can generate a lot of them quickly, so I'm looking forward to breaking this out at my next games night and flicking through some with some friends.
 
 
-# How To Use:
-1. Download alloy 6 (5 would probably work too): https://alloytools.org/download.html
-2. Paste the model solution into the box. Then click Execute in the toolbar at the top and choose the type of game you want. Explanation below
+# How To Use
+1. Download Alloy 6 (5 would probably work too): https://alloytools.org/download.html
+2. Paste the model solution into the box.
+3. Choose the right game setting for the number of players you have. Explained below.
 
 Here's the list of all the run options:
-run OddPlayersNoBuried
+_run OddPlayersNoBuried
 run EvenPlayersOddRoomsNoBuried
 run EvenPlayersEvenRoomsNoBuried
 
 run OddPlayersBuried
 run EvenPlayersOddRoomsBuried
-run EvenPlayersEvenRoomsBuried
+run EvenPlayersEvenRoomsBuried_
 
-Depending on how many players you have certain cards shouldn't be included (Mayor and Bouncer) as they rely on an odd or even number of players in the rooms to work. I've commented the numbers of players that each of these use above each of these for ease of use. Additionally, some cards require a buried card to work, so if you're not going to bury a card then select one of the "...NoBuried" options. Selecting a "...Buried" game enforces the presence of the support primary cards (Presidents Daughter, Martyr, Tinkerer and Nurse) and enables the optional presence of the Drunk, Private Eye and Gambler.
+Depending on how many players you have certain cards shouldn't be included (Mayor and Bouncer) as they rely on an odd or even number of players in the rooms to work. For quick reference, I've commented each number from 6-30 above the appropriate run option. 
+Some cards require a buried card to work, so if you're not going to bury a card then select one of the "...NoBuried" options. Selecting a "...Buried" game enforces the presence of the support primary cards (Presidents Daughter, Martyr, Tinkerer and Nurse) and enables the optional presence of the Drunk, Private Eye and Gambler.
 
 4. Modify the number of players you're playing with. After the brackets on each run option is a list, you only need to modify the "exactly # Player" part to be the number of players in the game. Note that in a buried game the buried card is included in the player total so this number should be the number of players in the game +1.
 
 Example:
-run OddPlayersNoBuried{
+_run OddPlayersNoBuried{
 	//(sum p:Player | p.rating) = 7
-} for **exactly 13 Player**, 0 Drunk, 0 Gambler, 0 PrivateEye
+} for **exactly 7 Player**, 0 Drunk, 0 Gambler, 0 PrivateEye_
 
