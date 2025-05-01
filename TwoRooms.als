@@ -565,8 +565,8 @@ fact {
 		others not in Invincible
 	}
 
-	// Game restrictor
-	all p: Player | p in (President + Doctor + Bomber + Engineer + RedTeamer + BlueTeamer + Spy + Coyboy)
+	// A method of broadly restricting what characters can appear
+	//all p: Player | p in (President + Doctor + Bomber + Engineer + RedTeamer + BlueTeamer + Spy + Coyboy)
 
 }
 
@@ -589,12 +589,13 @@ run EvenPlayersEvenRoomsNoBuried{
 // Buried games, note that this means you say "exactly <p+1> Player" to account for the buried card
 // For: 7, 9, 11, ,13, 15, 17, 19, 21, 23, 25, 27, 29 Player
 run OddPlayersBuried{ 
-} for exactly 30 Player, 1 Drunk, 1 Gambler, 1 PrivateEye, exactly 1 PresidentsDaughter, exactly 1 Martyr, exactly 1 Nurse, exactly 1 Tinkerer
+	#GreyTeam.players > 0
+} for 0 TuesdayKnight, 5 RedTeamer, 5 BlueTeamer, exactly 20 Player, 1 PresidentsDaughter, 1 Martyr, 1 Nurse, 1 Tinkerer
 
 // For: 6, 10, 14, 18, 22, 26, 30 Player
 run EvenPlayersOddRoomsBuried{
-} for exactly 31 Player, 0 Bouncer, 1 Drunk, 1 Gambler, 1 PrivateEye, 0 Mayor, exactly 1 PresidentsDaughter, exactly 1 Martyr, exactly 1 Nurse, exactly 1 Tinkerer
+} for exactly 19 Player
 
 // For: 8, 12, 16, 20, 24, 28 Player
 run EvenPlayersEvenRoomsBuried{	
-} for exactly 29 Player, 0 Bouncer, 1 Drunk, 1 Gambler, 1 PrivateEye, 2 Mayor, exactly 1 PresidentsDaughter, exactly 1 Martyr, exactly 1 Nurse, exactly 1 Tinkerer
+} for exactly 13 Player
