@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Agent"/>
+   <type name="Agoraphobe"/>
+   <type name="Ahab"/>
+   <type name="Ambassador"/>
+   <type name="Anarchist"/>
+   <type name="Angel"/>
+   <type name="Blue"/>
+   <type name="BlueTeamer"/>
+   <type name="BombBot"/>
+   <type name="Bomber"/>
+   <type name="Bouncer"/>
+   <type name="Butler"/>
+   <type name="Clone"/>
+   <type name="Clown"/>
+   <type name="Conman"/>
+   <type name="Coyboy"/>
+   <type name="Criminal"/>
+   <type name="Cupid"/>
+   <type name="Dealer"/>
+   <type name="Decoy"/>
+   <type name="Demon"/>
+   <type name="Doctor"/>
+   <type name="DrBoom"/>
+   <type name="Enforcer"/>
+   <type name="Engineer"/>
+   <type name="Eris"/>
+   <type name="Gambler"/>
+   <type name="Grey"/>
+   <type name="HotPotato"/>
+   <type name="Int"/>
+   <type name="Intern"/>
+   <type name="Invincible"/>
+   <type name="Juliet"/>
+   <type name="M16"/>
+   <type name="Maid"/>
+   <type name="Martyr"/>
+   <type name="Mastermind"/>
+   <type name="Mayor"/>
+   <type name="Medic"/>
+   <type name="Mime"/>
+   <type name="Minion"/>
+   <type name="Mistress"/>
+   <type name="Moby"/>
+   <type name="Mummy"/>
+   <type name="Negotiator"/>
+   <type name="NuclearTyrant"/>
+   <type name="Nurse"/>
+   <type name="Paparazzo"/>
+   <type name="Paranoid"/>
+   <type name="President"/>
+   <type name="PresidentsDaughter"/>
+   <type name="PrivateEye"/>
+   <type name="Psychologist"/>
+   <type name="Queen"/>
+   <type name="Red"/>
+   <type name="RedTeamer"/>
+   <type name="Rival"/>
+   <type name="Robot"/>
+   <type name="Romeo"/>
+   <type name="Security"/>
+   <type name="ShyGuy"/>
+   <type name="Sniper"/>
+   <type name="Spy"/>
+   <type name="String"/>
+   <type name="Survivor"/>
+   <type name="Target"/>
+   <type name="Team"/>
+   <type name="Thug"/>
+   <type name="Tinkerer"/>
+   <type name="Traveller"/>
+   <type name="TuesdayKnight"/>
+   <type name="univ"/>
+   <type name="Userper"/>
+   <type name="Victim"/>
+   <type name="Wife"/>
+   <type name="ordering/Ord"/>
+   <type name="seq/Int"/>
+</node>
+
+<node color="Black">
+   <type name="Drunk"/>
+</node>
+
+<node color="Blue">
+   <type name="BlueTeam"/>
+</node>
+
+<node color="Gray">
+   <type name="GreyTeam"/>
+</node>
+
+<node color="Green">
+   <type name="Leprechaun"/>
+   <type name="Zombie"/>
+</node>
+
+<node color="Red">
+   <type name="RedTeam"/>
+</node>
+
+<node hideunconnected="no">
+   <type name="Player"/>
+</node>
+
+<node visible="no">
+   <type name="Colour"/>
+</node>
+
+<edge color="Black">
+   <relation name="team"> <type name="Player"/> <type name="Team"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="balance"> <type name="Player"/> <type name="Int"/> </relation>
+   <relation name="counterpart"> <type name="Ahab"/> <type name="Moby"/> </relation>
+   <relation name="counterpart"> <type name="Ambassador"/> <type name="Ambassador"/> </relation>
+   <relation name="counterpart"> <type name="Anarchist"/> <type name="Minion"/> </relation>
+   <relation name="counterpart"> <type name="BombBot"/> <type name="Queen"/> </relation>
+   <relation name="counterpart"> <type name="Butler"/> <type name="Maid"/> </relation>
+   <relation name="counterpart"> <type name="Clone"/> <type name="Robot"/> </relation>
+   <relation name="counterpart"> <type name="Cupid"/> <type name="Eris"/> </relation>
+   <relation name="counterpart"> <type name="Doctor"/> <type name="Engineer"/> </relation>
+   <relation name="counterpart"> <type name="DrBoom"/> <type name="TuesdayKnight"/> </relation>
+   <relation name="counterpart"> <type name="Engineer"/> <type name="Doctor"/> </relation>
+   <relation name="counterpart"> <type name="Eris"/> <type name="Cupid"/> </relation>
+   <relation name="counterpart"> <type name="Intern"/> <type name="Survivor"/> </relation>
+   <relation name="counterpart"> <type name="Intern"/> <type name="Victim"/> </relation>
+   <relation name="counterpart"> <type name="Invincible"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart"> <type name="Invincible"/> <type name="Thug"/> </relation>
+   <relation name="counterpart"> <type name="Juliet"/> <type name="Romeo"/> </relation>
+   <relation name="counterpart"> <type name="Maid"/> <type name="Butler"/> </relation>
+   <relation name="counterpart"> <type name="Martyr"/> <type name="Bomber"/> </relation>
+   <relation name="counterpart"> <type name="Mastermind"/> <type name="Minion"/> </relation>
+   <relation name="counterpart"> <type name="Mastermind"/> <type name="Userper"/> </relation>
+   <relation name="counterpart"> <type name="Mistress"/> <type name="Wife"/> </relation>
+   <relation name="counterpart"> <type name="Moby"/> <type name="Ahab"/> </relation>
+   <relation name="counterpart"> <type name="Negotiator"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart"> <type name="Negotiator"/> <type name="Dealer"/> </relation>
+   <relation name="counterpart"> <type name="Negotiator"/> <type name="Thug"/> </relation>
+   <relation name="counterpart"> <type name="NuclearTyrant"/> <type name="M16"/> </relation>
+   <relation name="counterpart"> <type name="Nurse"/> <type name="Doctor"/> </relation>
+   <relation name="counterpart"> <type name="Paranoid"/> <type name="Medic"/> </relation>
+   <relation name="counterpart"> <type name="Paranoid"/> <type name="Psychologist"/> </relation>
+   <relation name="counterpart"> <type name="PresidentsDaughter"/> <type name="President"/> </relation>
+   <relation name="counterpart"> <type name="Psychologist"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart"> <type name="Psychologist"/> <type name="Thug"/> </relation>
+   <relation name="counterpart"> <type name="Queen"/> <type name="BombBot"/> </relation>
+   <relation name="counterpart"> <type name="Rival"/> <type name="Survivor"/> </relation>
+   <relation name="counterpart"> <type name="Rival"/> <type name="Victim"/> </relation>
+   <relation name="counterpart"> <type name="Robot"/> <type name="Clone"/> </relation>
+   <relation name="counterpart"> <type name="Romeo"/> <type name="Juliet"/> </relation>
+   <relation name="counterpart"> <type name="ShyGuy"/> <type name="Dealer"/> </relation>
+   <relation name="counterpart"> <type name="ShyGuy"/> <type name="Medic"/> </relation>
+   <relation name="counterpart"> <type name="ShyGuy"/> <type name="Psychologist"/> </relation>
+   <relation name="counterpart"> <type name="Survivor"/> <type name="Intern"/> </relation>
+   <relation name="counterpart"> <type name="Survivor"/> <type name="Rival"/> </relation>
+   <relation name="counterpart"> <type name="Tinkerer"/> <type name="Engineer"/> </relation>
+   <relation name="counterpart"> <type name="TuesdayKnight"/> <type name="DrBoom"/> </relation>
+   <relation name="counterpart"> <type name="Userper"/> <type name="Mastermind"/> </relation>
+   <relation name="counterpart"> <type name="Userper"/> <type name="Minion"/> </relation>
+   <relation name="counterpart"> <type name="Victim"/> <type name="Intern"/> </relation>
+   <relation name="counterpart"> <type name="Victim"/> <type name="Rival"/> </relation>
+   <relation name="counterpart"> <type name="Wife"/> <type name="Mistress"/> </relation>
+   <relation name="counterpart1"> <type name="Coyboy"/> <type name="Coyboy"/> </relation>
+   <relation name="counterpart1"> <type name="Coyboy"/> <type name="Negotiator"/> </relation>
+   <relation name="counterpart1"> <type name="Coyboy"/> <type name="Spy"/> </relation>
+   <relation name="counterpart1"> <type name="Criminal"/> <type name="Doctor"/> </relation>
+   <relation name="counterpart1"> <type name="Dealer"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart1"> <type name="Dealer"/> <type name="Psychologist"/> </relation>
+   <relation name="counterpart1"> <type name="Dealer"/> <type name="Thug"/> </relation>
+   <relation name="counterpart1"> <type name="Decoy"/> <type name="Sniper"/> </relation>
+   <relation name="counterpart1"> <type name="Enforcer"/> <type name="Coyboy"/> </relation>
+   <relation name="counterpart1"> <type name="Enforcer"/> <type name="ShyGuy"/> </relation>
+   <relation name="counterpart1"> <type name="Enforcer"/> <type name="Thug"/> </relation>
+   <relation name="counterpart1"> <type name="Medic"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart1"> <type name="Medic"/> <type name="Dealer"/> </relation>
+   <relation name="counterpart1"> <type name="Medic"/> <type name="Thug"/> </relation>
+   <relation name="counterpart1"> <type name="Minion"/> <type name="Anarchist"/> </relation>
+   <relation name="counterpart1"> <type name="Minion"/> <type name="Mastermind"/> </relation>
+   <relation name="counterpart1"> <type name="Minion"/> <type name="Userper"/> </relation>
+   <relation name="counterpart1"> <type name="Mummy"/> <type name="Medic"/> </relation>
+   <relation name="counterpart1"> <type name="Mummy"/> <type name="Psychologist"/> </relation>
+   <relation name="counterpart1"> <type name="Sniper"/> <type name="Decoy"/> </relation>
+   <relation name="counterpart1"> <type name="Target"/> <type name="Sniper"/> </relation>
+   <relation name="counterpart1"> <type name="Thug"/> <type name="Doctor"/> </relation>
+   <relation name="counterpart1"> <type name="Thug"/> <type name="Engineer"/> </relation>
+   <relation name="counterpart1"> <type name="Zombie"/> <type name="Doctor"/> </relation>
+   <relation name="counterpart2"> <type name="Coyboy"/> <type name="Coyboy"/> </relation>
+   <relation name="counterpart2"> <type name="Coyboy"/> <type name="Negotiator"/> </relation>
+   <relation name="counterpart2"> <type name="Coyboy"/> <type name="Spy"/> </relation>
+   <relation name="counterpart2"> <type name="Criminal"/> <type name="Engineer"/> </relation>
+   <relation name="counterpart2"> <type name="Dealer"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart2"> <type name="Dealer"/> <type name="Medic"/> </relation>
+   <relation name="counterpart2"> <type name="Dealer"/> <type name="Psychologist"/> </relation>
+   <relation name="counterpart2"> <type name="Decoy"/> <type name="Target"/> </relation>
+   <relation name="counterpart2"> <type name="Enforcer"/> <type name="Coyboy"/> </relation>
+   <relation name="counterpart2"> <type name="Enforcer"/> <type name="Criminal"/> </relation>
+   <relation name="counterpart2"> <type name="Enforcer"/> <type name="ShyGuy"/> </relation>
+   <relation name="counterpart2"> <type name="Medic"/> <type name="Coyboy"/> </relation>
+   <relation name="counterpart2"> <type name="Medic"/> <type name="ShyGuy"/> </relation>
+   <relation name="counterpart2"> <type name="Minion"/> <type name="Anarchist"/> </relation>
+   <relation name="counterpart2"> <type name="Minion"/> <type name="Mastermind"/> </relation>
+   <relation name="counterpart2"> <type name="Minion"/> <type name="Userper"/> </relation>
+   <relation name="counterpart2"> <type name="Mummy"/> <type name="Mime"/> </relation>
+   <relation name="counterpart2"> <type name="Sniper"/> <type name="Target"/> </relation>
+   <relation name="counterpart2"> <type name="Target"/> <type name="Decoy"/> </relation>
+   <relation name="counterpart2"> <type name="Thug"/> <type name="Medic"/> </relation>
+   <relation name="counterpart2"> <type name="Thug"/> <type name="Psychologist"/> </relation>
+   <relation name="counterpart2"> <type name="Thug"/> <type name="Spy"/> </relation>
+   <relation name="counterpart2"> <type name="Zombie"/> <type name="Engineer"/> </relation>
+   <relation name="counterpart3"> <type name="Criminal"/> <type name="Enforcer"/> </relation>
+   <relation name="counterpart3"> <type name="Criminal"/> <type name="Psychologist"/> </relation>
+   <relation name="grey_count"> <type name="Player"/> <type name="Int"/> </relation>
+   <relation name="players"> <type name="Team"/> <type name="Player"/> </relation>
+   <relation name="team_count"> <type name="Player"/> <type name="Int"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
